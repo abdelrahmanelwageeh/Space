@@ -1,0 +1,414 @@
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-transition-duration: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+}
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 55px;
+  padding: 40px;
+}
+/* end global rules */
+/* strat home */
+.home {
+  background-image: url(../starter-code/assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding-right: 0;
+}
+/* strat header */
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 96px;
+}
+header nav {
+  width: 830px;
+  height: 96px;
+  background-color: rgb(255 255 254 / 4%);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 542px;
+  margin-left: 123px;
+  gap: 48px;
+  font-weight: 200;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  height: 100%;
+}
+header nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+header nav ul li a {
+  color: white;
+}
+header nav ul li span {
+  font-weight: bold;
+}
+header nav::before {
+  content: "";
+  width: 620px;
+  height: 0.01rem;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: -590px;
+  padding: 0;
+}
+header nav ul li:before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -38px;
+  transition: 1s;
+}
+header nav ul .active::before {
+  width: 100%;
+}
+/* end header */
+/* start landing */
+.landing {
+  height: calc(100vh - 136px);
+  padding-top: 251px;
+  padding-left: 125px;
+  padding-bottom: 131px;
+  padding-right: 165px;
+  display: flex;
+  justify-content: space-between;
+}
+.landing .text {
+  width: 450px;
+  height: 382px;
+  color: white;
+}
+.landing .text .top {
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 4.7px;
+}
+.landing .text .title {
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 150px;
+  font-weight: 200;
+}
+.landing .text .inf {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 2;
+  height: 128px;
+  width: 350px8;
+}
+.landing .explore {
+  font-family: "Bellefair", serif;
+  width: 274px;
+  height: 274px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* end landing */
+/* start destination  */
+.destination {
+  height: 100vh;
+  background-image: url(../starter-code/assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  color: white;
+  padding-top: 180px;
+}
+.destination .title {
+  padding-left: 126px;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+}
+.destination .title span {
+  color: rgb(255 255 255 / 50%);
+}
+.destination .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+.destination .content .image {
+  padding-left: 190px;
+  padding-top: 60px;
+  transition: var(--main-transition-duration);
+}
+.destination .content .image img {
+  transition: var(--main-transition-duration);
+  width: 400px;
+  height: 400px;
+}
+.destination .right {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3 0px;
+}
+.destination .right .list {
+  display: flex;
+  gap: 40px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-top: 50px;
+  letter-spacing: 2.7px;
+}
+.destination .right .list li {
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+}
+.destination .right .list li::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 0%;
+  background-color: white;
+  height: 2px;
+  transition: var(--main-transition-duration);
+}
+.destination .right .list .active::before {
+  width: 100%;
+}
+/* .destination .right .list li:hover::before {
+} */
+.destination .right .inf {
+  padding-left: 20px;
+  padding-top: 50px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+.destination .right .inf .title {
+  font-size: 100px;
+  font-family: "Bellefair", serif;
+  font-weight: 100;
+  padding: 0;
+}
+.destination .right .inf > p {
+  font-size: 18px;
+  line-height: 2;
+  color: #d0d6f9;
+  padding-bottom: 40px;
+}
+.destination .right .inf hr {
+  opacity: 0.5;
+}
+.destination .right .inf .details {
+  padding-top: 20px;
+  display: flex;
+  gap: 100px;
+}
+.destination .right .inf .details .distance .title,
+.destination .right .inf .details .time .title {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+}
+.destination .right .inf .details .distance .value,
+.destination .right .inf .details .time .value {
+  font-size: 28px;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+/* end destination  */
+/* start crew */
+.crew {
+  height: 100vh;
+  background-image: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  color: white;
+  padding-top: 180px;
+  overflow: hidden;
+}
+.crew .title {
+  padding-left: 126px;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+}
+.crew .title span {
+  color: rgb(255 255 255 / 50%);
+}
+.crew .content {
+  padding-left: 126px;
+  display: flex;
+  justify-content: space-between;
+}
+.crew .content .details {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.crew .content .details .title {
+  padding: 0;
+  padding-bottom: 10px;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  letter-spacing: 0;
+  color: rgb(255 255 255 / 50%);
+}
+.crew .content .details .name {
+  font-family: "Bellefair", serif;
+  font-size: 56px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.crew .content .details .inf {
+  font-size: 20px;
+  padding-top: 20px;
+  letter-spacing: 0;
+  line-height: 2;
+  color: #d0d6f9;
+  width: 400px;
+}
+.crew .content .details .circles {
+  display: flex;
+  gap: 20px;
+  padding-top: 50px;
+}
+.crew .content .details .circles div {
+  width: 15px;
+  height: 15px;
+  background-color: #979797;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.crew .content .details .circles .active {
+  background-color: white;
+}
+.crew .content .image {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crew .content .image img {
+  max-width: 380px;
+}
+/* end crew */
+/* start technology */
+.technology {
+  height: 100vh;
+  background-image: url(../starter-code/assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  color: white;
+  padding-top: 180px;
+  overflow: hidden;
+}
+.technology .title {
+  padding-left: 126px;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+}
+.technology .title span {
+  color: rgb(255 255 255 / 50%);
+}
+.technology .content {
+  padding-left: 126px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 80px;
+}
+.technology .content .circles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+  padding-top: 100px;
+}
+.technology .content .circles div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  font-size: 32px;
+  font-family: "Bellefair", serif;
+  cursor: pointer;
+}
+.technology .content .circles .active {
+  color: #0b0d17;
+  background-color: white;
+}
+.technology .content .details {
+  align-self: center;
+  padding-top: 100px;
+}
+.technology .content .details .type {
+  color: #d0d6f9;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.technology .content .details .name {
+  padding-top: 10px;
+  font-size: 50px;
+  font-family: "Bellefair", serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.technology .content .details .inf {
+  padding-top: 20px;
+  color: #d0d6f9;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 70%;
+}
+.technology .content .image {
+  width: 100%;
+  height: 400px;
+  margin-right: -40px;
+  padding-bottom: 20px;
+}
+.technology .content .image img {
+  max-width: 100%;
+}
+/* end technology */
